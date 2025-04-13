@@ -15,11 +15,11 @@ threejs_gravsim プロジェクトは、 [Three.js](https://threejs.org/) 製の
 
 # How to Use
 
-1. Open ... with browser.
+1. Open [this page](https://cubic9com.github.io/threejs_gravsim/) with browser.
 
 \[日本語\]
 
-1. ...をブラウザで開きます。
+1. [このページ](https://cubic9com.github.io/threejs_gravsim/) をブラウザで開きます。
 
 # Installation for developers
 
