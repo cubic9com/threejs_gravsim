@@ -13,7 +13,7 @@ const PhysicsConstants = {
     // Minimum distance (to prevent collisions)
     MIN_DISTANCE: 1.0,
     // Skip gravity calculations between planets beyond this distance (to reduce processing load)
-    MAX_FORCE_DISTANCE: 100.0,
+    MAX_FORCE_DISTANCE: 50.0,
     // Speed factor
     SPEED_FACTOR: 2.0e-14
 };
@@ -23,7 +23,7 @@ const SunConstants = {
     // Sun's mass
     MASS: 1.11e7,
     // Sun's radius (pixels)
-    RADIUS: 5,
+    RADIUS: 3,
     // Sun's base color
     COLOR: 0xFFA500, // Orange
     // Intensity of sun's brightness fluctuation
@@ -35,7 +35,7 @@ const PlanetConstants = {
     // Planet's mass
     MASS: 200000,
     // Planet's radius (pixels)
-    RADIUS: 1,
+    RADIUS: 0.5,
     // Maximum number of planets
     MAX_COUNT: 10,
     // Number of points in the trail
@@ -55,7 +55,7 @@ const RenderConstants = {
 // Constants for collision effects
 const CollisionConstants = {
     // Collision effect radius (pixels)
-    COLLISION_EFFECT_RADIUS: 2,
+    COLLISION_EFFECT_RADIUS: 1,
     // Collision effect color
     COLLISION_EFFECT_COLOR: 0xFFFF00, // Yellow
     // Collision effect duration (milliseconds)

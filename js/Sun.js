@@ -47,8 +47,8 @@ class Sun {
             const startY = 0;
             const startZ = -1; // Set behind the sun body
             
-            // Line endpoint (5-6 pixels from sun center, random angle)
-            const length = 5 + Math.random() * 2;
+            // Line endpoint 
+            const length = 2 + Math.random() * 2;
             const endX = length * Math.cos(angle);
             const endY = length * Math.sin(angle);
             const endZ = -1; // Set behind the sun body

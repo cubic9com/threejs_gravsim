@@ -21,7 +21,7 @@ class Planet {
         this.color = color;
         
         // Create planet geometry and material
-        this.geometry = new THREE.SphereGeometry(PlanetConstants.RADIUS, 16, 16);
+        this.geometry = new THREE.CircleGeometry(PlanetConstants.RADIUS, 16);
         this.material = new THREE.MeshBasicMaterial({ 
             color: this.color,
             transparent: false,
