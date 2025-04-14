@@ -23,6 +23,9 @@ class InputHandler {
         // Object for displaying the arrow
         this.arrowHelper = null;
         
+        // Get audio manager instance
+        this.audioManager = AudioManager.getInstance();
+        
         // Set up event listeners
         this.setupEventListeners();
     }
@@ -116,6 +119,9 @@ class InputHandler {
         
         // Add a new planet
         this.physicsEngine.addPlanet(worldCoords.x, worldCoords.y, vx, vy);
+        
+        // Play sound for planet creation
+        this.audioManager.playSound('planetCreation');
         
         // Reset pointer state
         this.isPointerDown = false;

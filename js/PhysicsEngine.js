@@ -19,6 +19,9 @@ class PhysicsEngine {
         this.collisionEffectY = 0;
         this.collisionEffectStartTime = 0;
         this.collisionEffectMesh = null;
+        
+        // Get audio manager instance
+        this.audioManager = AudioManager.getInstance();
     }
     
     /**
@@ -211,6 +214,9 @@ class PhysicsEngine {
                 this.collisionEffectMesh.position.set(this.collisionEffectX, this.collisionEffectY, 0);
                 this.scene.add(this.collisionEffectMesh);
                 
+                // Play sound for sun collision
+                this.audioManager.playSound('sunCollision');
+                
                 // Remove planet
                 planet.remove();
                 this.planets.splice(i, 1);
@@ -257,4 +263,5 @@ class PhysicsEngine {
     getCollisionEffectY() {
         return this.collisionEffectY;
     }
+    
 }
