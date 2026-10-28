@@ -1,13 +1,15 @@
 
 # Overview
 
-The threejs_gravsim project is a gravity simulator of a planetary system made with [Three.js](https://threejs.org/) .  
-This project is also the Three.js version of [m5core2_gravsim](https://github.com/cubic9com/m5core2_gravsim) .
+A tiny universe in a browser tab: a gravity simulator made with [Three.js](https://threejs.org/), where every planet pulls on every other. Place them, fling them, and watch orbits form, wobble, and collide.
+
+This project is the Three.js version of [m5core2_gravsim](https://github.com/cubic9com/m5core2_gravsim).
 
 \[日本語\]
 
-threejs_gravsim プロジェクトは、 [Three.js](https://threejs.org/) 製の惑星系の万有引力シミュレーターです。  
-またこのプロジェクトは [m5core2_gravsim](https://github.com/cubic9com/m5core2_gravsim) のThree.js版です。
+ブラウザのタブの中に広がる、小さな宇宙。このプロジェクトは[Three.js](https://threejs.org/)で作られた重力シミュレーターです。すべての惑星が互いに引き合います。惑星を配置し、勢いよく飛ばしてみよう。軌道が生まれ、揺らぎ、やがて衝突する。そのダイナミックな動きを楽しんでください。
+
+このプロジェクトは [m5core2_gravsim](https://github.com/cubic9com/m5core2_gravsim) のThree.js版です。
 
 # Video
 
