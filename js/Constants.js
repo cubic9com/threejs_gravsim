@@ -52,6 +52,38 @@ const RenderConstants = {
     SCREEN_MARGIN: 20
 };
 
+// Constants for firework effects (shown when a planet collides with the sun)
+// Values are converted from the M5Stack version's pixels to world units
+// (the M5Stack screen is 240 px tall, the world view is 100 units tall)
+const FireworkConstants = {
+    // Number of particles per firework
+    PARTICLE_COUNT: 30,
+    // Initial speed of particles (world units per frame)
+    PARTICLE_SPEED: 1.25,
+    // Particle size (pixels, shrinks as it fades)
+    PARTICLE_SIZE: 4,
+    // Lifetime of particles (frames)
+    PARTICLE_LIFETIME: 10,
+    // Maximum number of firework effects
+    MAX_EFFECTS: 5
+};
+
+// Constants for ripple effects (shown when a planet is placed)
+const RippleConstants = {
+    // Ripple expansion speed (world units per frame)
+    EXPANSION_SPEED: 1.04,
+    // Ripple lifetime (frames)
+    LIFETIME: 20,
+    // Maximum number of simultaneous ripples
+    MAX_RIPPLES: 10,
+    // Initial ripple radius (world units)
+    INITIAL_RADIUS: 0.83,
+    // Distance between the outer and inner rings (world units)
+    INNER_RING_OFFSET: 1.25,
+    // The inner ring is drawn once the radius exceeds this value (world units)
+    INNER_RING_MIN_RADIUS: 1.67
+};
+
 // Constants for collision effects
 const CollisionConstants = {
     // Collision effect radius (pixels)

@@ -22,6 +22,9 @@ class PhysicsEngine {
         
         // Get audio manager instance
         this.audioManager = AudioManager.getInstance();
+        
+        // Effects (ripples and fireworks)
+        this.effects = new Effects(scene);
     }
     
     /**
@@ -35,6 +38,9 @@ class PhysicsEngine {
         const color = Planet.randomPastelColor();
         const planet = new Planet(this.scene, x, y, vx, vy, color);
         this.planets.push(planet);
+        
+        // Create a ripple effect at the placement position
+        this.effects.createRipple(x, y, color);
         
         // Remove the oldest planet if the maximum number of planets is exceeded
         if (this.planets.length > PlanetConstants.MAX_COUNT) {
@@ -130,6 +136,9 @@ class PhysicsEngine {
      * @returns {boolean} Whether trail positions were updated
      */
     update() {
+        // Update effects (ripples and fireworks)
+        this.effects.update();
+        
         // Determine whether trail positions should be updated
         const shouldUpdateTrailPositions = this.shouldUpdateTrails();
         
@@ -213,6 +222,9 @@ class PhysicsEngine {
                 this.collisionEffectMesh = new THREE.Mesh(effectGeometry, effectMaterial);
                 this.collisionEffectMesh.position.set(this.collisionEffectX, this.collisionEffectY, 0);
                 this.scene.add(this.collisionEffectMesh);
+                
+                // Create a firework effect at the collision position
+                this.effects.createFirework(planet.x, planet.y, planet.color);
                 
                 // Play sound for sun collision
                 this.audioManager.playSound('sunCollision');
